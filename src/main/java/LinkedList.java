@@ -95,6 +95,24 @@ public class LinkedList<T> {
         }
     }
 
+    public int search(T data){
+        if(isEmpty()){
+            System.out.println("LinkedList is empty so Value cannot be searched");
+        }
+        int ind=0;
+        Node<T>temp=head;
+        while(temp!=null){
+            if(temp.data==data){
+                return ind;
+            }
+
+            ind++;
+            temp=temp.next;
+        }
+
+        return -1;
+    }
+
     public void Display() {
         Node<T> temp=head;
 
