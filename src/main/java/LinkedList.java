@@ -69,12 +69,30 @@ public class LinkedList<T> {
        }
     }
 
-    public void deleteHead(){
+    public void deleteFront(){
         if(isEmpty()){
             System.out.println("LinkedList is Empty");
             return;
         }
         head=head.next;
+    }
+
+    public void deleteRear(){
+        if(isEmpty()){
+            System.out.println("Linked List is Empty");
+            return ;
+        }else if(head.next==null){
+            head=null;
+        }else{
+            Node<T>temp=head;
+            Node<T>prev=head;
+            while(temp.next!=null){
+                prev=temp;
+                temp=temp.next;
+            }
+
+            prev.next=null;
+        }
     }
 
     public void Display() {
@@ -85,7 +103,7 @@ public class LinkedList<T> {
             if(temp.next!=null) System.out.print(" -> ");
             temp=temp.next;
         }
-
+        
         System.out.println();
     }
 }

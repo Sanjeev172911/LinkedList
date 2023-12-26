@@ -6,7 +6,7 @@ public class LinkedListTest {
 
         list.addRear(56);
 
-        list.addRear(90);
+        list.addRear(70);
 
         list.Display();
         list.insert(1,30);
@@ -14,8 +14,8 @@ public class LinkedListTest {
         System.out.println("After Insertion : ");
         list.Display();
 
-        System.out.println("After Deletion in Front");
-        list.deleteHead();
+        System.out.println("After Deletion in Rear");
+        list.deleteRear();
         list.Display();
 
 
