@@ -69,6 +69,14 @@ public class LinkedList<T> {
        }
     }
 
+    public void deleteHead(){
+        if(isEmpty()){
+            System.out.println("LinkedList is Empty");
+            return;
+        }
+        head=head.next;
+    }
+
     public void Display() {
         Node<T> temp=head;
 
