@@ -36,6 +36,16 @@ public class LinkedList<T> {
         temp.next=newNode;
     }
 
+    void addFront(T data){
+        Node<T> newNode=new Node(data);
+
+        if(head==null) head=newNode;
+        else{
+            newNode.next=head;
+            head=newNode;
+        }
+    }
+
     public void Display() {
         Node<T> temp=head;
 

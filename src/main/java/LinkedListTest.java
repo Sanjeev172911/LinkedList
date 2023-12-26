@@ -4,9 +4,9 @@ public class LinkedListTest {
 
         System.out.println("Is list Empty : "+list.isEmpty());
 
-        list.add(56);
-        list.add(30);
-        list.add(70);
+        list.addFront(70);
+        list.addFront(30);
+        list.addFront(56);
 
         list.Display();
 
