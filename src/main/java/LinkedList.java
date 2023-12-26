@@ -46,6 +46,29 @@ public class LinkedList<T> {
         }
     }
 
+    void insert(int position,T data){
+       Node<T>newNode=new Node(data);
+
+       if(position<0 || position>size()){
+           System.out.println("Cannot Insert as its not a valid position");
+           return;
+       }else if(position==0){
+           if(head==null) head=newNode;
+           else{
+               newNode.next=head;
+               head=newNode;
+           }
+       }else{
+           Node<T> temp=head;
+           for(int i=0;i<position-1;i++){
+               temp=temp.next;
+           }
+
+           newNode.next=temp.next;
+           temp.next=newNode;
+       }
+    }
+
     public void Display() {
         Node<T> temp=head;
 
