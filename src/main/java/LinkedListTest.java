@@ -9,8 +9,11 @@ public class LinkedListTest {
         list.addRear(70);
 
         list.Display();
+        int ind=list.search(30);
+        System.out.println("Position of 30 is "+ind);
 
-        System.out.println("Position of 30 is "+list.search(30));
+        list.insert(ind+1,40);
+        list.Display();
 
         
         System.out.println("Is list Empty : "+list.isEmpty());
