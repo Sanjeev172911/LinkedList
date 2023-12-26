@@ -21,7 +21,7 @@ public class LinkedList<T> {
         return cnt;
     }
 
-    void add(T data){
+    void addRear(T data){
         if(head==null){
             head=new Node(data);
             return ;

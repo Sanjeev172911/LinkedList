@@ -4,14 +4,12 @@ public class LinkedListTest {
 
         System.out.println("Is list Empty : "+list.isEmpty());
 
-        list.addFront(70);
-        list.addFront(30);
-        list.addFront(56);
+        list.addRear(56);
+        list.addRear(30);
+        list.addRear(70);
 
         list.Display();
 
         System.out.println("Is list Empty : "+list.isEmpty());
-
-
     }
 }
