@@ -21,7 +21,7 @@ public class LinkedList<T> {
         return cnt;
     }
 
-    void addRear(T data){
+    void add(T data){
         if(head==null){
             head=new Node(data);
             return ;
@@ -95,6 +95,38 @@ public class LinkedList<T> {
         }
     }
 
+    public void delete(T data){
+        int ind=search(data);
+
+        if(ind<0){
+            System.out.println("Node is not present in LinkedList");
+            return;
+        }
+
+        deleteViaInd(ind);
+    }
+
+    public void deleteViaInd(int position){
+        if(isEmpty() || position<0){
+            System.out.println("Node cannot be deleted");
+            return;
+        }else if(position==0){
+            head=head.next;
+        }else{
+            Node<T>temp=head;
+            Node<T>prev=null;
+            int iniPos=0;
+
+            while(iniPos<position){
+                prev=temp;
+                temp=temp.next;
+                iniPos++;
+            }
+
+            prev.next=temp.next;
+        }
+    }
+
     public int search(T data){
         if(isEmpty()){
             System.out.println("LinkedList is empty so Value cannot be searched");
@@ -111,6 +143,10 @@ public class LinkedList<T> {
         }
 
         return -1;
+    }
+
+    public void orderList(){
+
     }
 
     public void Display() {
